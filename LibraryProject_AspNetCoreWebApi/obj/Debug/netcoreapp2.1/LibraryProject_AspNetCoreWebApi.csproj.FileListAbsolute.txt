@@ -1,0 +1,13 @@
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\bin\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.dll.config
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\bin\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.deps.json
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\bin\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.runtimeconfig.json
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\bin\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.runtimeconfig.dev.json
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\bin\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.dll
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.csprojAssemblyReference.cache
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.dll.config
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.csproj.CoreCompileInputs.cache
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.RazorAssemblyInfo.cache
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.RazorAssemblyInfo.cs
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.AssemblyInfoInputs.cache
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.AssemblyInfo.cs
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.RazorTargetAssemblyInfo.cache

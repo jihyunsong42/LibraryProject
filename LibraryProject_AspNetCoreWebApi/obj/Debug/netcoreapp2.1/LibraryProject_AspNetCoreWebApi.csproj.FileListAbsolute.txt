@@ -11,3 +11,6 @@ C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\Librar
 C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.AssemblyInfoInputs.cache
 C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.AssemblyInfo.cs
 C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.RazorTargetAssemblyInfo.cache
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\bin\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.pdb
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.dll
+C:\LibraryProject\LibraryProject_AspNetCoreWebApi\obj\Debug\netcoreapp2.1\LibraryProject_AspNetCoreWebApi.pdb

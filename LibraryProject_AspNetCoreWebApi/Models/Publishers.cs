@@ -23,8 +23,7 @@ namespace LibraryProject_AspNetCoreWebApi.Models
 
         [Required, StringLength(30)]
         public string Country { get; set; }
-
-
+        
         public virtual Employee Employee { get; set; }
 
         public virtual Pub_info Pub_info { get; set; }

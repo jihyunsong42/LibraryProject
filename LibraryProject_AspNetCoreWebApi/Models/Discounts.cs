@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,9 +9,12 @@ namespace LibraryProject_AspNetCoreWebApi.Models
 {
     public class Discounts
     {
+        [Key]
+        public string fakeId { get; set; }
         [Required, StringLength(40)]
         public string Discounttype { get; set; }
 
+        [ForeignKey("Stores")]
         [Required, StringLength(4)]
         public string Stor_id { get; set; }
 

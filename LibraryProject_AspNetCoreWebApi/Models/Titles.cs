@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -18,6 +19,7 @@ namespace LibraryProject_AspNetCoreWebApi.Models
         [Required, StringLength(12)]
         public string Type { get; set; }
 
+        [ForeignKey("Publishers")]
         [Required, StringLength(4)]
         public string Pub_id { get; set; }
 

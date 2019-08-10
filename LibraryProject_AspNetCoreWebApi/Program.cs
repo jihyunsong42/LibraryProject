@@ -22,9 +22,14 @@ namespace LibraryProject_AspNetCoreWebApi
             // day 1 : Objects and Relations Mapped
             // next step : http connection, solve CORS issues, connect to Database
 
-            // day 2 :Connected Database. Implemented AuthorsController
-            // next step : install FluentAPI for multi-primary key
+            // day 2 : Connected Database. Implemented AuthorsController
+            // next step : use FluentAPI for multi-primary key
             // use postman to get a result of authorsSerivce.get()
+
+            // day 3 : multi-PK issue solved
+            // faced with many different problems during call authorsService.get()
+            // current issue : recursive problem(it happened while setting foreign key)
+            // next step : fix the recursive issue, call authorsService.get()
       
 
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -22,10 +23,12 @@ namespace LibraryProject_AspNetCoreWebApi.Models
         [Required, StringLength(30)]
         public string Lname { get; set; }
         
+        [ForeignKey("Jobs")]
         public short Job_id { get; set; }
 
         public short? Job_lvl { get; set; }
 
+        [ForeignKey("Publishers")]
         [Required, StringLength(4)]
         public string Pub_id { get; set; }
 

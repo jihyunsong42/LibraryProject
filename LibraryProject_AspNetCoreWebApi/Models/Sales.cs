@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,10 +10,10 @@ namespace LibraryProject_AspNetCoreWebApi.Models
     public class Sales
     {
         [Key]
+        [ForeignKey("Stores")]
         [Required, StringLength(4)]
         public string Stor_id { get; set; }
 
-        [Key]
         [Required, StringLength(20)]
         public string Ord_num { get; set; }
 
@@ -23,7 +24,7 @@ namespace LibraryProject_AspNetCoreWebApi.Models
         [Required, StringLength(12)]
         public string Payterms { get; set; }
 
-        [Key]
+        [ForeignKey("Titles")]
         [Required, StringLength(6)]
         public string Title_id { get; set; }
 

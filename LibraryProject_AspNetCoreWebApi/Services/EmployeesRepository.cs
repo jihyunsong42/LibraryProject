@@ -7,35 +7,35 @@ using LibraryProject_AspNetCoreWebApi.Models;
 
 namespace LibraryProject_AspNetCoreWebApi.Services
 {
-    public class EmployeeRepository : IEmployee
+    public class EmployeesRepository : IEmployees
     {
         //Dependancy Injection
         private BookstoreDbContext bookstoreDbContext;
-        public EmployeeRepository(BookstoreDbContext _bookstoreDbContext)
+        public EmployeesRepository(BookstoreDbContext _bookstoreDbContext)
         {
             bookstoreDbContext = _bookstoreDbContext;
         }
 
 
 
-        public IQueryable<Employee> GetEmployees()
+        public IQueryable<Employees> GetEmployees()
         {
             return bookstoreDbContext.Employees;
         }
 
-        public Employee GetEmployee(string id)
+        public Employees GetEmployee(string id)
         {
             var employee = bookstoreDbContext.Employees.SingleOrDefault(i => i.Emp_id == id);
             return employee;
         }
 
-        public void AddEmployee(Employee employee)
+        public void AddEmployee(Employees employee)
         {
             bookstoreDbContext.Add(employee);
             bookstoreDbContext.SaveChanges(true);
         }
         
-        public void UpdateEmployee(Employee employee)
+        public void UpdateEmployee(Employees employee)
         {
             bookstoreDbContext.Update(employee);
             bookstoreDbContext.SaveChanges(true);

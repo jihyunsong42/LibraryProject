@@ -9,8 +9,6 @@ namespace LibraryProject_AspNetCoreWebApi.Models
 {
     public class Sales
     {
-        [Key]
-        [ForeignKey("Stores")]
         [Required, StringLength(4)]
         public string Stor_id { get; set; }
 
@@ -23,14 +21,13 @@ namespace LibraryProject_AspNetCoreWebApi.Models
 
         [Required, StringLength(12)]
         public string Payterms { get; set; }
-
-        [ForeignKey("Titles")]
+        
         [Required, StringLength(6)]
         public string Title_id { get; set; }
 
 
-        public virtual ICollection<Stores> Stores { get; set; }
+        public virtual Stores Store { get; set; }
 
-        public virtual ICollection<Titles> Titles { get; set; }
+        public virtual Titles Title { get; set; }
     }
 }

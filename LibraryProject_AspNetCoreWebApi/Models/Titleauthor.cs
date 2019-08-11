@@ -9,22 +9,19 @@ namespace LibraryProject_AspNetCoreWebApi.Models
 {
     public class Titleauthor
     {
-        [Key]
-        [ForeignKey("Authors")]
         [Required, StringLength(11)]
         public string Au_id { get; set; }
         
         [Required, StringLength(6)]
-        [ForeignKey("Titles")]
         public string Title_id { get; set; }
 
-        public short? Au_ord { get; set; }
+        public byte? Au_ord { get; set; }
 
         public int? Royaltyper { get; set; }
 
 
-        public virtual ICollection<Authors> Authors { get; set; }
+        public virtual Authors Author { get; set; }
 
-        public virtual ICollection<Titles> Titles { get; set; }
+        public virtual Titles Title { get; set; }
     }
 }

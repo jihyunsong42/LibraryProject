@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace LibraryProject_AspNetCoreWebApi.Models
 {
     public class Authors
     {
-        [Key]
+     
         [Required, StringLength(11)]
         public string Au_id { get; set; }
 
@@ -35,7 +36,6 @@ namespace LibraryProject_AspNetCoreWebApi.Models
 
         public bool Contract { get; set; }
 
-
-        public virtual Titleauthor Titleauthor { get; set; }
+        public virtual ICollection<Titleauthor> Titleauthors { get; set; }
     }
 }

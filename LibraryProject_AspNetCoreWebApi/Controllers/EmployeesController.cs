@@ -12,42 +12,43 @@ namespace LibraryProject_AspNetCoreWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthorsController : ControllerBase
+    public class EmployeesController : ControllerBase
     {
-        private IAuthors _authorsService;
-        public AuthorsController(IAuthors authorsService)
+        private IEmployees _employeesService;
+        public EmployeesController(IEmployees employeesService)
         {
-            _authorsService = authorsService;
+            _employeesService = employeesService;
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Authors>> Get()
+        public ActionResult<IEnumerable<Employees>> Get()
         {
-            return Ok(_authorsService.GetAuthors());
+            return Ok(_employeesService.GetEmployees());
         }
 
         [HttpGet("{id}")]
         public ActionResult<string> Get(string id)
         {
-            return Ok(_authorsService.GetAuthor(id));
+            return Ok(_employeesService.GetEmployee(id));
         }
 
+
         [HttpPost]
-        public void Post([FromBody] Authors author)
+        public void Post([FromBody] Employees employee)
         {
-            _authorsService.AddAuthor(author);
+            _employeesService.AddEmployee(employee);
         }
 
         [HttpPut("{id}")]
-        public void Put(string id, [FromBody]Authors author)
+        public void Put(string id, [FromBody]Employees employee)
         {
-            _authorsService.UpdateAuthor(author);
+            _employeesService.UpdateEmployee(employee);
         }
 
         [HttpDelete("{id}")]
         public void Delete(string id)
         {
-            _authorsService.DeleteAuthor(id);
+            _employeesService.DeleteEmployee(id);
         }
     }
 }

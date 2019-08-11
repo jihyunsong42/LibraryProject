@@ -9,12 +9,11 @@ namespace LibraryProject_AspNetCoreWebApi.Models
 {
     public class Discounts
     {
-        [Key]
         public string fakeId { get; set; }
+
         [Required, StringLength(40)]
         public string Discounttype { get; set; }
-
-        [ForeignKey("Stores")]
+        
         [Required, StringLength(4)]
         public string Stor_id { get; set; }
 
@@ -25,9 +24,8 @@ namespace LibraryProject_AspNetCoreWebApi.Models
         [RegularExpression(@"^\d+\.\d{0,2}$")]
         [Range(0, 9999.99)]
         public decimal Discount { get; set; }
-
-
-        public virtual ICollection<Stores> Stores { get; set; }
+        
+        public virtual Stores Store { get; set; }
 
     }
 }

@@ -32,7 +32,7 @@ namespace LibraryProject_AspNetCoreWebApi
 
             // built-in dependency injection
             services.AddScoped<IAuthors, AuthorsRepository>();
-            services.AddScoped<IEmployee, EmployeeRepository>();
+            services.AddScoped<IEmployees, EmployeesRepository>();
             services.AddScoped<IJobs, JobsRepository>();
             services.AddScoped<IPub_info, Pub_infoRepository>();
             services.AddScoped<IPublishers, PublishersRepository>();

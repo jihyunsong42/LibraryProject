@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace LibraryProject_AspNetCoreWebApi.Models
 {
-    public class Employee
+    public class Employees
     {
-        [Key]
         [Required, StringLength(9)]
         public string Emp_id { get; set; }
 
@@ -23,20 +22,18 @@ namespace LibraryProject_AspNetCoreWebApi.Models
         [Required, StringLength(30)]
         public string Lname { get; set; }
         
-        [ForeignKey("Jobs")]
         public short Job_id { get; set; }
 
-        public short? Job_lvl { get; set; }
-
-        [ForeignKey("Publishers")]
+        public byte? Job_lvl { get; set; }
+        
         [Required, StringLength(4)]
         public string Pub_id { get; set; }
 
         public DateTime Hire_date { get; set; }
 
-
-        public virtual ICollection<Jobs> Jobs { get; set; }
-
-        public virtual ICollection<Publishers> Publishers { get; set; }
+        // foreign key refers primary key, so Employee class has a dependency on Jobs class
+        public virtual Jobs Job { get; set; }
+        
+        public virtual Publishers Publisher { get; set; }
     }
 }

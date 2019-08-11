@@ -8,7 +8,6 @@ namespace LibraryProject_AspNetCoreWebApi.Models
 {
     public class Stores
     {
-        [Key]
         [Required, StringLength(4)]
         public string Stor_id { get; set; }
 
@@ -27,10 +26,9 @@ namespace LibraryProject_AspNetCoreWebApi.Models
         [Required, StringLength(5)]
         public string Zip { get; set; }
 
+        public virtual ICollection<Discounts> Discounts { get; set; }
 
-        public virtual Discounts Discounts { get; set; }
-
-        public virtual Sales Sales { get; set; }
+        public virtual ICollection<Sales> Sales { get; set; }
 
         
     }

@@ -30,8 +30,12 @@ namespace LibraryProject_AspNetCoreWebApi
             // faced with many different problems during call authorsService.get()
             // current issue : recursive problem(it happened while setting foreign key)
             // next step : fix the recursive issue, call authorsService.get()
-      
 
+            // day 4 : recursive issue solved
+            // succeeded to call authorsService.get()
+            // implemented get, post, put, delete, and successed call them
+            // issues: an error occured when employee post is called.
+            // its probably because of 'Employees' table name renaming.
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

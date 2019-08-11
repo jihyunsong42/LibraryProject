@@ -8,17 +8,16 @@ namespace LibraryProject_AspNetCoreWebApi.Models
 {
     public class Jobs
     {
-        [Key]
         public short Job_id { get; set; }
         
         [Required, StringLength(50)]
         public string Job_desc { get; set; }
 
-        public short Min_lvl { get; set; }
-        public short Max_lvl { get; set; }
+        public byte Min_lvl { get; set; }
+        public byte Max_lvl { get; set; }
 
 
-        public virtual Employee Employee { get; set; }
+        public virtual ICollection<Employees> Employees { get; set; }
 
     }
 }

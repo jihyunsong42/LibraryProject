@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace LibraryProject_AspNetCoreWebApi.Services
 {
-    public interface IEmployee
+    public interface IEmployees
     {
-        IQueryable<Employee> GetEmployees();
-        Employee GetEmployee(string id);
-        void AddEmployee(Employee employee);
-        void UpdateEmployee(Employee employee);
+        IQueryable<Employees> GetEmployees();
+        Employees GetEmployee(string id);
+        void AddEmployee(Employees employee);
+        void UpdateEmployee(Employees employee);
         void DeleteEmployee(string id);
     }
 }

@@ -20,12 +20,12 @@ namespace LibraryProject_AspNetCoreWebApi.Services
 
         public IQueryable<Pub_info> GetPub_infos()
         {
-            return bookstoreDbContext.Pub_infos;
+            return bookstoreDbContext.Pub_info;
         }
 
         public Pub_info GetPub_info(string id)
         {
-            var info = bookstoreDbContext.Pub_infos.SingleOrDefault(i => i.Pub_id == id);
+            var info = bookstoreDbContext.Pub_info.SingleOrDefault(i => i.Pub_id == id);
             return info;
         }
 
@@ -43,7 +43,7 @@ namespace LibraryProject_AspNetCoreWebApi.Services
 
         public void DeletePub_info(string id)
         {
-            var item = bookstoreDbContext.Pub_infos.Find(id);
+            var item = bookstoreDbContext.Pub_info.Find(id);
             bookstoreDbContext.Remove(item);
             bookstoreDbContext.SaveChanges(true);
 

@@ -9,7 +9,6 @@ namespace LibraryProject_AspNetCoreWebApi.Models
 {
     public class Titles
     {
-        [Key]
         [Required, StringLength(6)]
         public string Title_id { get; set; }
 
@@ -18,14 +17,13 @@ namespace LibraryProject_AspNetCoreWebApi.Models
 
         [Required, StringLength(12)]
         public string Type { get; set; }
-
-        [ForeignKey("Publishers")]
+        
         [Required, StringLength(4)]
         public string Pub_id { get; set; }
 
-        public long? Price { get; set; }
+        public decimal? Price { get; set; }
 
-        public long? Advance { get; set; }
+        public decimal? Advance { get; set; }
 
         public int? Royalty { get; set; }
 
@@ -37,12 +35,12 @@ namespace LibraryProject_AspNetCoreWebApi.Models
         public DateTime Pubdate { get; set; }
 
 
-        public virtual Roysched Roysched { get; set; }
+        public virtual ICollection<Roysched> Royscheds { get; set; }
 
-        public virtual Sales Sales { get; set; }
+        public virtual ICollection<Sales> Sales { get; set; }
 
-        public virtual Titleauthor Titleauthor { get; set; }
+        public virtual ICollection<Titleauthor> Titleauthors { get; set; }
 
-        public virtual ICollection<Publishers> Publishers { get; set; }
+        public virtual Publishers Publisher { get; set; }
     }
 }

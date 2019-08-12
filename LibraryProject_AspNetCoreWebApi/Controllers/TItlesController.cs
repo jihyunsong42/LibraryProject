@@ -31,5 +31,23 @@ namespace LibraryProject_AspNetCoreWebApi.Controllers
         {
             return Ok(_titlesService.GetTitle(id));
         }
+
+        [HttpPost]
+        public void Post([FromBody] Titles title)
+        {
+            _titlesService.AddTitle(title);
+        }
+
+        [HttpPut("{id}")]
+        public void Put(string id, [FromBody]Titles title)
+        {
+            _titlesService.UpdateTitle(title);
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(string id)
+        {
+            _titlesService.DeleteTitle(id);
+        }
     }
 }

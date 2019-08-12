@@ -31,5 +31,23 @@ namespace LibraryProject_AspNetCoreWebApi.Controllers
         {
             return Ok(_pub_infoService.GetPub_info(id));
         }
+
+        [HttpPost]
+        public void Post([FromBody] Pub_info pub_info)
+        {
+            _pub_infoService.AddPub_info(pub_info);
+        }
+
+        [HttpPut("{id}")]
+        public void Put(string id, [FromBody]Pub_info pub_info)
+        {
+            _pub_infoService.UpdatePub_info(pub_info);
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(string id)
+        {
+            _pub_infoService.DeletePub_info(id);
+        }
     }
 }

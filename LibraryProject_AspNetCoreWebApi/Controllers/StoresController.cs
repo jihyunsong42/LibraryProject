@@ -31,5 +31,23 @@ namespace LibraryProject_AspNetCoreWebApi.Controllers
         {
             return Ok(_storesService.GetStore(id));
         }
+
+        [HttpPost]
+        public void Post([FromBody] Stores store)
+        {
+            _storesService.AddStore(store);
+        }
+
+        [HttpPut("{id}")]
+        public void Put(string id, [FromBody]Stores store)
+        {
+            _storesService.UpdateStore(store);
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(string id)
+        {
+            _storesService.DeleteStore(id);
+        }
     }
 }

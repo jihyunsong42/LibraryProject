@@ -26,10 +26,28 @@ namespace LibraryProject_AspNetCoreWebApi.Controllers
             return Ok(_salesService.GetSales());
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}/{ord_num}/{title_id}")]
         public ActionResult<string> Get(string stor_id, string ord_num, string title_id)
         {
             return Ok(_salesService.GetSale(stor_id, ord_num, title_id));
+        }
+
+        [HttpPost]
+        public void Post([FromBody] Sales sale)
+        {
+            _salesService.AddSale(sale);
+        }
+
+        [HttpPut("{id}/{ord_num}/{title_id}")]
+        public void Put(string id, [FromBody]Sales sale)
+        {
+            _salesService.UpdateSale(sale);
+        }
+
+        [HttpDelete("{id}/{ord_num}/{title_id}")]
+        public void Delete(string id, string ord_num, string title_id)
+        {
+            _salesService.DeleteSale(id, ord_num, title_id);
         }
     }
 }

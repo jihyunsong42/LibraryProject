@@ -31,5 +31,23 @@ namespace LibraryProject_AspNetCoreWebApi.Controllers
         {
             return Ok(_publishersService.GetPublisher(id));
         }
+
+        [HttpPost]
+        public void Post([FromBody] Publishers publisher)
+        {
+            _publishersService.AddPublisher(publisher);
+        }
+
+        [HttpPut("{id}")]
+        public void Put(string id, [FromBody]Publishers publisher)
+        {
+            _publishersService.UpdatePublisher(publisher);
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(string id)
+        {
+            _publishersService.DeletePublisher(id);
+        }
     }
 }

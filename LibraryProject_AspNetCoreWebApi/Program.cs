@@ -36,6 +36,12 @@ namespace LibraryProject_AspNetCoreWebApi
             // implemented get, post, put, delete, and successed call them
             // issues: an error occured when employee post is called.
             // its probably because of 'Employees' table name renaming.
+
+            // day 5 : found the issue is because of SQL, not Entity Framework.
+            // Implemented all controllers and validated its all functions.
+            // issues : EmployeesController is still not working,(Put and Post)
+            // issues 2 : Cannot call Get(id) in SalesController and Titleauthor(as those have a composite key)
+
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

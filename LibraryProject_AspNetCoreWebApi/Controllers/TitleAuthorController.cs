@@ -26,10 +26,28 @@ namespace LibraryProject_AspNetCoreWebApi.Controllers
             return Ok(_titleauthorService.GetTitleauthors());
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}/{title_id}")]
         public ActionResult<string> Get(string au_id, string title_id)
         {
             return Ok(_titleauthorService.GetTitleauthor(au_id, title_id));
+        }
+
+        [HttpPost]
+        public void Post([FromBody] Titleauthor titleauthor)
+        {
+            _titleauthorService.AddTitleauthor(titleauthor);
+        }
+
+        [HttpPut("{id}/{title_id}")]
+        public void Put(string id, [FromBody]Titleauthor titleauthor)
+        {
+            _titleauthorService.UpdateTitleauthor(titleauthor);
+        }
+
+        [HttpDelete("{id}/{title_id}")]
+        public void Delete(string id, string title_id)
+        {
+            _titleauthorService.DeleteTitleauthor(id, title_id);
         }
     }
 }

@@ -10,8 +10,8 @@ namespace LibraryProject_AspNetCoreWebApi.Services
     {
         IQueryable<Employees> GetEmployees();
         Employees GetEmployee(string id);
-        void AddEmployee(Employees employee);
-        void UpdateEmployee(Employees employee);
+        void AddEmployee(Employees employees);
+        void UpdateEmployee(Employees employees);
         void DeleteEmployee(string id);
     }
 }

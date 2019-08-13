@@ -42,6 +42,14 @@ namespace LibraryProject_AspNetCoreWebApi
             // issues : EmployeesController is still not working,(Put and Post)
             // issues 2 : Cannot call Get(id) in SalesController and Titleauthor(as those have a composite key)
 
+            // day 6 : solved issue 1 by making new table.
+            // issue 2 is solve by chaning id to title_id in http attribute.
+            // Validated all functions of Controllers
+            // started Front-End development
+            // Implementing Stored Procedure
+            // issues : Cannot call Stored Procedure : uspGetTitleByKeywordAsc from DbContext.
+
+
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

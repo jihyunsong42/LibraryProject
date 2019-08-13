@@ -24,9 +24,9 @@ namespace LibraryProject_AspNetCoreWebApi.Services
         public Sales GetSale(string stor_id, string ord_num, string title_id)
         {
             var sale = bookstoreDbContext.Sales.SingleOrDefault(i => (
-                i.Stor_id == stor_id &&
-                i.Ord_num == ord_num &&
-                i.Title_id == title_id
+                (i.Stor_id == stor_id) &&
+                (i.Ord_num == ord_num) &&
+                (i.Title_id == title_id)
             ));
             return sale;
         }

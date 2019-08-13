@@ -16,8 +16,6 @@ namespace LibraryProject_AspNetCoreWebApi.Services
             bookstoreDbContext = _bookstoreDbContext;
         }
 
-        
-
         public IQueryable<Titles> GetTitles()
         {
             return bookstoreDbContext.Titles;
@@ -29,12 +27,18 @@ namespace LibraryProject_AspNetCoreWebApi.Services
             return title;
         }
 
+        public IQueryable<Titles> GetTitlesByName(string titleName)
+        {
+            string sp = "uspGetTitleByKeywordAsc, " + titleName;
+            bookstoreDbContext.Database.
+        }
+
         public void AddTitle(Titles title)
         {
             bookstoreDbContext.Add(title);
             bookstoreDbContext.SaveChanges(true);
         }
-        
+
         public void UpdateTitle(Titles title)
         {
             bookstoreDbContext.Update(title);
@@ -48,8 +52,8 @@ namespace LibraryProject_AspNetCoreWebApi.Services
             bookstoreDbContext.SaveChanges(true);
 
         }
-
-
+        
     }
-}
 
+
+}

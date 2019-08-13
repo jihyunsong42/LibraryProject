@@ -26,9 +26,9 @@ namespace LibraryProject_AspNetCoreWebApi.Controllers
             return Ok(_salesService.GetSales());
         }
 
-        [HttpGet("{id}/{ord_num}/{title_id}")]
+        [HttpGet("{stor_id}/{ord_num}/{title_id}")]
         public ActionResult<string> Get(string stor_id, string ord_num, string title_id)
-        {
+            {
             return Ok(_salesService.GetSale(stor_id, ord_num, title_id));
         }
 
@@ -38,16 +38,16 @@ namespace LibraryProject_AspNetCoreWebApi.Controllers
             _salesService.AddSale(sale);
         }
 
-        [HttpPut("{id}/{ord_num}/{title_id}")]
-        public void Put(string id, [FromBody]Sales sale)
+        [HttpPut("{stor_id}/{ord_num}/{title_id}")]
+        public void Put(string stor_id, string ord_num, string title_id, [FromBody]Sales sale)
         {
             _salesService.UpdateSale(sale);
         }
 
-        [HttpDelete("{id}/{ord_num}/{title_id}")]
-        public void Delete(string id, string ord_num, string title_id)
+        [HttpDelete("{stor_id}/{ord_num}/{title_id}")]
+        public void Delete(string stor_id, string ord_num, string title_id)
         {
-            _salesService.DeleteSale(id, ord_num, title_id);
+            _salesService.DeleteSale(stor_id, ord_num, title_id);
         }
     }
 }

@@ -31,6 +31,12 @@ namespace LibraryProject_AspNetCoreWebApi.Controllers
         {
             return Ok(_titlesService.GetTitle(id));
         }
+        
+        //[HttpGet("titleName")]
+        //public ActionResult<<IEnumerable<Titles>> GetTitleByName(string titleName)
+        //{
+        //    return Ok(_titlesService.Get
+        //}
 
         [HttpPost]
         public void Post([FromBody] Titles title)

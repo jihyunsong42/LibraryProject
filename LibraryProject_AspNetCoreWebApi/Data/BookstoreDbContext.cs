@@ -56,6 +56,9 @@ namespace LibraryProject_AspNetCoreWebApi.Data
 
             modelBuilder.Entity<Titles>().HasOne(t => t.Publisher).WithMany(p => p.Titles).HasForeignKey(t => t.Pub_id);
           
+            // import stored procedure
+
+            
         }
 
 
@@ -68,7 +71,5 @@ namespace LibraryProject_AspNetCoreWebApi.Data
         public DbSet<Stores> Stores { get; set; }
         public DbSet<Titleauthor> Titleauthors { get; set; }
         public DbSet<Titles> Titles { get; set; }
-
-        
     }
 }

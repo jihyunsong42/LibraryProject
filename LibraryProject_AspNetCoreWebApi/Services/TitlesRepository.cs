@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using LibraryProject_AspNetCoreWebApi.Data;
 using LibraryProject_AspNetCoreWebApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryProject_AspNetCoreWebApi.Services
 {
@@ -29,8 +30,7 @@ namespace LibraryProject_AspNetCoreWebApi.Services
 
         public IQueryable<Titles> GetTitlesByName(string titleName)
         {
-            string sp = "uspGetTitleByKeywordAsc, " + titleName;
-            bookstoreDbContext.Database.
+            return bookstoreDbContext.Titles.FromSql("uspGetTitleByKeywordAsc @p0", titleName);
         }
 
         public void AddTitle(Titles title)

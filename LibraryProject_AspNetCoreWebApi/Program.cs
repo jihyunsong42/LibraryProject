@@ -49,6 +49,11 @@ namespace LibraryProject_AspNetCoreWebApi
             // Implementing Stored Procedure
             // issues : Cannot call Stored Procedure : uspGetTitleByKeywordAsc from DbContext.
 
+            // day 7 : solved an issue by using Microsoft.EntityFrameworkCore
+            // issue : cannot return composite columns selected by Stored Procedure
+            // I assume that it can't be returned to IQueryable<Titles> type, as it includes various different types.
+
+
 
         }
 

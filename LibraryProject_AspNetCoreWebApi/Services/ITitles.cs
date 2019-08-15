@@ -10,7 +10,7 @@ namespace LibraryProject_AspNetCoreWebApi.Services
     {
         IQueryable<Titles> GetTitles();
         Titles GetTitle(string id);
-        IQueryable<Titles> GetTitlesByName(string titleName);
+        IQueryable<TitlesByKeyword> GetTitlesByName(string titleName);
         void AddTitle(Titles title);
         void UpdateTitle(Titles title);
         void DeleteTitle(string id);

@@ -1,16 +1,23 @@
-<input type="text" class="form-control">
-<div class="form-check-inline">
-  <label class="form-check-label">
-    <input type="checkbox" class="form-check-input" value="">ID
-  </label>
+<div class="card card-body mb-3">
+  <form (ngSubmit)="OnSubmit()">
+    <div class="form-group">
+      <input type="text" name="text" class="form-control" placeholder="book ID, Title, etc...">
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">ID
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">Name
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">Title
+      </label>
+    </div>
+  </form>
 </div>
-<div class="form-check-inline">
-  <label class="form-check-label">
-    <input type="checkbox" class="form-check-input" value="">Name
-  </label>
-</div>
-<div class="form-check-inline">
-    <label class="form-check-label">
-      <input type="checkbox" class="form-check-input" value="">Title
-    </label>
-  </div>
+

@@ -53,7 +53,9 @@ namespace LibraryProject_AspNetCoreWebApi
             // issue : cannot return composite columns selected by Stored Procedure
             // I assume that it can't be returned to IQueryable<Titles> type, as it includes various different types.
 
-
+            // day 8 : finally called Stored Procedure by creating new TitlesByKeyword Model
+            // and save SELECT results in IQueryable<TitlesByKeyword>
+            // Next step : develop Front-end Webpage.
 
         }
 

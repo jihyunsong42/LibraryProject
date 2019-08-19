@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from '../../services/book.service'
+import { TitlesByKeyword } from 'src/app/models/StoredProcedureModels/TitlesByKeyword';
 
 @Component({
   selector: 'app-booklist',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooklistComponent implements OnInit {
 
-  constructor() { }
+  keywords:string;
+  books:TitlesByKeyword[];
+  constructor(private bookService : BookService) { }
 
   ngOnInit() {
+    
+    this.bookService.getBooks().subscribe(books => {
+      this.books = books;
+      console.log(books);
+    })
   }
 
 }

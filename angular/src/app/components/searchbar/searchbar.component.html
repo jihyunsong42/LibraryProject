@@ -1,8 +1,9 @@
 <div class="card card-body mb-3">
-  <form (ngSubmit)="OnSubmit()">
+  <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <input type="text" name="text" class="form-control" placeholder="book ID, Title, etc...">
+      <input type="text" name="keywords" [(ngModel)]="keywords" class="form-control" placeholder="book ID, Title, etc...">
     </div>
+    <button type="submit" class="btn btn-primary">Search</button>
     <div class="form-check-inline">
       <label class="form-check-label">
         <input type="checkbox" class="form-check-input" value="">ID
@@ -20,4 +21,3 @@
     </div>
   </form>
 </div>
-

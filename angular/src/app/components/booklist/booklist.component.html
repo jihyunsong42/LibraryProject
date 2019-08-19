@@ -1,0 +1,10 @@
+<ul class="list-group" *ngIf="books?.length > 0">
+  <li *ngFor= "let book of books" class="list-group-item d-flex justify-content-between align-items-center" >
+    <a> Title: {{ book.title }}</a><br>
+    <a> Author : {{ book.au_lname }} {{ book.au_fname }}</a><br>
+    <a> Publisher : {{ book.pub_name }}</a><br>
+    <a> Price : ${{ book.price }}</a><br>
+    <a> Description : {{ book.notes }}</a><br>
+    <span class="pub-date">{{ book.pubdate | date: 'short'}}</span><br><br>
+  </li>
+</ul>

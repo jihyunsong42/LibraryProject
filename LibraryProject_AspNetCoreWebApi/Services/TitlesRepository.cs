@@ -29,6 +29,11 @@ namespace LibraryProject_AspNetCoreWebApi.Services
             return title;
         }
 
+        public IQueryable<TitlesByKeyword> GetTitlesByName()
+        {
+            return bookstoreDbContext.TitlesByKeyword.FromSql("uspGetTitleByKeywordAsc @p0", "");
+        }
+
         public IQueryable<TitlesByKeyword> GetTitlesByName(string titleName)
         {
             // 1. Linq Query Method

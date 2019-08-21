@@ -8,16 +8,17 @@ import { BookService } from '../../services/book.service'
 })
 export class SearchbarComponent implements OnInit {
 
-  keywords:string;
-
   constructor(private bookService: BookService) { }
 
+  keywords:string="the";
+
   ngOnInit() {
-    
+    //this.bookService.currentKeyword.subscribe(keyword => )
   }
 
   onSubmit() {
-    this.bookService.url = this.bookService.url + this.keywords;
+    console.log("submitted");
+    this.bookService.changeKeywords(this.keywords);
   }
 
 }

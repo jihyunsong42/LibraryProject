@@ -10,15 +10,14 @@ export class SearchbarComponent implements OnInit {
 
   constructor(private bookService: BookService) { }
 
-  keywords:string="the";
+  keywords:string;
 
   ngOnInit() {
-    //this.bookService.currentKeyword.subscribe(keyword => )
   }
 
-  onSubmit() {
+  onSubmit() { // 버튼 클릭 시 url 변경
     console.log("submitted");
-    this.bookService.changeKeywords(this.keywords);
+    this.bookService.changeURL(this.keywords);
   }
 
 }

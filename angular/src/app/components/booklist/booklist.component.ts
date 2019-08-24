@@ -10,21 +10,16 @@ import { Observable } from 'rxjs';
 })
 export class BooklistComponent implements OnInit {
 
-  keywords:string;
   books:TitlesByKeyword[];
   constructor(private bookService : BookService) { }
   
 
-  ngOnInit() {
-    this.bookService.currentKeyword.subscribe(keywords => {
-      this.keywords = keywords;
-      console.log("'" + this.keywords + "' in booklist");
-    });
-    this.bookService.getBooks(this.keywords).subscribe(books => {
+  ngOnInit() { // 시작 시 getBooks Subscribe해서 지역 변수로 받음
+
+    this.bookService.getBooks().subscribe(books => {
       this.books = books;
       console.log(books);
     });
   }
-  
 
 }

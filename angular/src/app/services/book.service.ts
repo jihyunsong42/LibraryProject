@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { TitlesByKeyword } from '../models/StoredProcedureModels/TitlesByKeyword'
 import { Observable, of, BehaviorSubject } from 'rxjs'
-import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http'
 import { BooklistComponent } from '../components/booklist/booklist.component';
 
 @Injectable({
@@ -9,21 +9,25 @@ import { BooklistComponent } from '../components/booklist/booklist.component';
 })
 export class BookService {
 
-  constructor(private http:HttpClient) { }
-  result : TitlesByKeyword;
+  constructor(private http:HttpClient) {
+   }
+
   private keywordSource = new BehaviorSubject<string>("");
   currentKeyword = this.keywordSource.asObservable();
 
-  Books:TitlesByKeyword[];
   url:string = "http://localhost:5000/api/Titles/GetByTitle/";
-  url2:string;
+  url2:string = "http://localhost:5000/api/Titles/GetByTitle/";
 
-  getBooks(keywords:string) : Observable<TitlesByKeyword[]>{
-    console.log(keywords);
-    return this.http.get<TitlesByKeyword[]>("http://localhost:5000/api/Titles/GetByTitle/" + keywords);
+  // 변경된 url 주소로 http.get 받아오는 함수
+  getBooks() : Observable<TitlesByKeyword[]>{ 
+    return this.http.get<TitlesByKeyword[]>(this.url2);
   }
 
-  changeKeywords(keywords:string){
+  changeURL(keywords:string){ // url 변경 함수 (rxjs로 구현
     this.keywordSource.next(keywords);
+    this.currentKeyword.subscribe(keywords =>
+    {
+      this.url2 = this.url + keywords;
+    })
   }
 }

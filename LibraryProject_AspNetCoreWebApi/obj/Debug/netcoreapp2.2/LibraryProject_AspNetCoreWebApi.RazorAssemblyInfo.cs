@@ -11,13 +11,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("LibraryProject_AspNetCoreWebApi")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("LibraryProject_AspNetCoreWebApi")]
-[assembly: System.Reflection.AssemblyTitleAttribute("LibraryProject_AspNetCoreWebApi")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.RelatedAssemblyAttribute("LibraryProject_AspNetCoreWebApi.Views")]
+[assembly: Microsoft.AspNetCore.Razor.Hosting.RazorLanguageVersionAttribute("2.1")]
+[assembly: Microsoft.AspNetCore.Razor.Hosting.RazorConfigurationNameAttribute("MVC-2.1")]
+[assembly: Microsoft.AspNetCore.Razor.Hosting.RazorExtensionAssemblyNameAttribute("MVC-2.1", "Microsoft.AspNetCore.Mvc.Razor.Extensions")]
 
 // MSBuild WriteCodeFragment 클래스에서 생성되었습니다.
 

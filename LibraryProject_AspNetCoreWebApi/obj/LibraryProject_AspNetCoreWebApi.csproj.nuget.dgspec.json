@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\LibraryProject\\LibraryProject_AspNetCoreWebApi\\LibraryProject_AspNetCoreWebApi.csproj": {}
+  },
+  "projects": {
+    "C:\\LibraryProject\\LibraryProject_AspNetCoreWebApi\\LibraryProject_AspNetCoreWebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\LibraryProject\\LibraryProject_AspNetCoreWebApi\\LibraryProject_AspNetCoreWebApi.csproj",
+        "projectName": "LibraryProject_AspNetCoreWebApi",
+        "projectPath": "C:\\LibraryProject\\LibraryProject_AspNetCoreWebApi\\LibraryProject_AspNetCoreWebApi.csproj",
+        "packagesPath": "C:\\Users\\Jihyun\\.nuget\\packages\\",
+        "outputPath": "C:\\LibraryProject\\LibraryProject_AspNetCoreWebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jihyun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

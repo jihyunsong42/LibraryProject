@@ -18,16 +18,19 @@ export class BookService {
   url:string = "http://localhost:5000/api/Titles/GetByTitle/";
   url2:string = "http://localhost:5000/api/Titles/GetByTitle/";
 
-  // 변경된 url 주소로 http.get 받아오는 함수
-  getBooks() : Observable<TitlesByKeyword[]>{ 
-    return this.http.get<TitlesByKeyword[]>(this.url2);
+  
+  streamKeywords(keywords:string){ // url 변경 함수 (rxjs로 구현
+    this.keywordSource.next(keywords);
+    
   }
 
-  changeURL(keywords:string){ // url 변경 함수 (rxjs로 구현
+  // 변경된 url 주소로 http.get 받아오는 함수
+  getBooks(keywords:string) : Observable<TitlesByKeyword[]>{
     this.keywordSource.next(keywords);
-    this.currentKeyword.subscribe(keywords =>
-    {
-      this.url2 = this.url + keywords;
-    })
+    var paramsT = new HttpParams().append('keyword', keywords);
+    console.log(paramsT);
+    return this.http.get<TitlesByKeyword[]>(this.url, { params: paramsT });
   }
+
+ 
 }

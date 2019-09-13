@@ -17,7 +17,7 @@ export class SearchbarComponent implements OnInit {
 
   onSubmit() { // 버튼 클릭 시 url 변경
     console.log("submitted");
-    this.bookService.changeURL(this.keywords);
+    this.bookService.streamKeywords(this.keywords);
   }
 
 }

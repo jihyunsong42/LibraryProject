@@ -12,11 +12,23 @@ export class BooklistComponent implements OnInit {
 
   books:TitlesByKeyword[];
   constructor(private bookService : BookService) { }
-  
+  keywords:string = "";
 
   ngOnInit() { // 시작 시 getBooks Subscribe해서 지역 변수로 받음
 
-    this.bookService.getBooks().subscribe(books => {
+
+    
+    this.bookService.getBooks(this.keywords).subscribe(books => {
+      this.books = books;
+      console.log(books);
+    });
+  }
+
+  callfunc(){
+    this.bookService.currentKeyword.subscribe(res => {
+      this.keywords = res;
+    });
+    this.bookService.getBooks(this.keywords).subscribe(books => {
       this.books = books;
       console.log(books);
     });

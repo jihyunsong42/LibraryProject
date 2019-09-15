@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core'
 import { BookService } from '../../services/book.service'
+import { EventEmitter } from 'protractor';
+import { Observable, BehaviorSubject, Subject } from 'rxjs';
+import { TitlesByKeyword } from '../../models/StoredProcedureModels/TitlesByKeyword';
+import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-searchbar',
@@ -8,16 +12,22 @@ import { BookService } from '../../services/book.service'
 })
 export class SearchbarComponent implements OnInit {
 
+  keywords:string="";
+  books:TitlesByKeyword[];
+
   constructor(private bookService: BookService) { }
 
-  keywords:string;
 
   ngOnInit() {
+    this.bookService.getBooks("").subscribe(res => { this.books = res; });
+    this.bookService.streamBooks.next(this.books);
   }
 
-  onSubmit() { // 버튼 클릭 시 url 변경
-    console.log("submitted");
-    this.bookService.streamKeywords(this.keywords);
+  onSubmit() {
+    this.bookService.getBooks(this.keywords).subscribe(res => { this.books = res; });
+    this.bookService.streamBooks.next(this.books);
+    console.log(this.books.length);
+    //this.books.forEach(res => console.log(res));
   }
 
 }

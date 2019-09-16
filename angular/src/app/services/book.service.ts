@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { TitlesByKeyword } from '../models/StoredProcedureModels/TitlesByKeyword'
-import { Subject, Observable, of, BehaviorSubject } from 'rxjs'
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http'
+import { Subject, Observable } from 'rxjs'
+import { HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class BookService {
   streamBooks = new Subject<TitlesByKeyword[]>();
   receiveBooks = this.streamBooks.asObservable();
 
-  url:string = "http://localhost:5000/api/Titles/GetByTitle/";
+  url:string = "http://localhost:5000/api/Titles/";
   
 
   //$books:Observable<TitlesByKeyword[]>;

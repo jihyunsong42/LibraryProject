@@ -4,19 +4,14 @@
       <input type="text" name="keywords" [(ngModel)]="keywords" class="form-control" placeholder="book ID, Title, etc...">
     </div>
     <button type="submit" class="btn btn-primary">Search</button>
-    <div class="form-check-inline">
+    <div class="form-check">
       <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">ID
+        <input type="radio" id="radio1" class="form-check-input" name="radio" value="GetByTitle/" checked>Book Title
       </label>
     </div>
-    <div class="form-check-inline">
+    <div class="form-check">
       <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">Name
-      </label>
-    </div>
-    <div class="form-check-inline">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input" value="">Title
+        <input type="radio" id="radio2" class="form-check-input" name="radio" value="GetByAuthorName/">Author's Name
       </label>
     </div>
   </form>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../../services/book.service'
 import { TitlesByKeyword } from 'src/app/models/StoredProcedureModels/TitlesByKeyword';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-booklist',

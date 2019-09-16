@@ -44,6 +44,19 @@ namespace LibraryProject_AspNetCoreWebApi.Controllers
             return Ok(_titlesService.GetTitlesByName(titleName));
         }
 
+        [HttpGet("GetByAuthorName")]
+        public ActionResult<IEnumerable<TitlesByKeyword>> GetTitleByAuthorName()
+        {
+            return Ok(_titlesService.GetTitlesByAuthorName());
+        }
+
+        [HttpGet("GetByAuthorName/{authorName}")]
+        public ActionResult<IEnumerable<TitlesByKeyword>> GetTitlyByAuthorName(string authorName)
+        {
+            return Ok(_titlesService.GetTitlesByAuthorName(authorName));
+        }
+
+
         [HttpPost]
         public void Post([FromBody] Titles title)
         {

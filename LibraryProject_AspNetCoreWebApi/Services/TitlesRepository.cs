@@ -64,6 +64,32 @@ namespace LibraryProject_AspNetCoreWebApi.Services
             
         }
 
+        public IQueryable<TitlesByKeyword> GetTitlesByAuthorName()
+        {
+            return bookstoreDbContext.TitlesByKeyword.FromSql("uspGetTitleByAuthorNameAsc @p0", "");
+        }
+
+        public IQueryable<TitlesByKeyword> GetTitlesByAuthorName(string authorName)
+        {
+            string au_lname, au_fname;
+            IQueryable<TitlesByKeyword> i;
+            if (authorName.Contains(" "))
+            {
+                string[] temp = authorName.Split(" ");
+                au_lname = temp[0];
+                au_fname = temp[1];
+                i = bookstoreDbContext.TitlesByKeyword.FromSql("uspGetTitleByAuthorFullNameAsc @p0, @p1", au_lname, au_fname);
+
+            }
+            else
+            {
+                i = bookstoreDbContext.TitlesByKeyword.FromSql("uspGetTitleByAuthorNameAsc @p0", authorName);
+            }
+
+            return i;
+
+        }
+
         public void AddTitle(Titles title)
         {
             bookstoreDbContext.Add(title);
